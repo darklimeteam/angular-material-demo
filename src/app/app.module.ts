@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PostListComponent } from './components/post-list/post-list.component';
 import { PostService } from './core/services/post.service';
+import { MaterialModule } from './modules/material.module';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { PostService } from './core/services/post.service';
     AppRoutingModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 100 }),
+    MaterialModule
   ],
   providers: [PostService],
   bootstrap: [AppComponent]
