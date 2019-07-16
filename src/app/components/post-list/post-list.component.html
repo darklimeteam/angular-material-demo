@@ -1,1 +1,3 @@
-<p>{{posts$ | async | json}}</p>
+<ng-container *ngFor="let post of posts$ | async">
+    <app-post-item [post]="post"></app-post-item>
+</ng-container>
