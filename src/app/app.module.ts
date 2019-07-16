@@ -4,6 +4,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClientModule } from '@angular/common/http';
 import { InMemoryDataService } from './fake-backend/in-memory-data.service';
 import { AppRoutingModule } from './app-routing.module';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { PostListComponent } from './components/post-list/post-list.component';
@@ -25,7 +26,8 @@ import { PostItemComponent } from './components/post-item/post-item.component';
     AppRoutingModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 100 }),
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule
   ],
   providers: [PostService],
   bootstrap: [AppComponent]
