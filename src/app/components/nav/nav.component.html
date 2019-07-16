@@ -17,6 +17,17 @@
       <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
     </button>
     <span>angular-material-demo</span>
+    <button mat-button [matMenuTriggerFor]="menu">
+      <mat-icon>
+          color_lens
+        </mat-icon>
+    </button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="setTheme(THEME_PICK.LIGHT)">Theme 1</button>
+  <button mat-menu-item (click)="setTheme(THEME_PICK.DARK)">Theme 2</button>
+  <button mat-menu-item (click)="setTheme(THEME_PICK.CUSTOM)">Theme 3</button>
+</mat-menu>
   </mat-toolbar>
   <ng-content></ng-content>
+  <!-- <router-outlet></router-outlet> -->
 </mat-drawer-container>

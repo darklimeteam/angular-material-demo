@@ -15,4 +15,11 @@
         <img mat-card-image [src]="post.imageSrc"  class="post-card-image">
         <div>{{post.text}}</div>
     </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="primary">LIKE</button>
+        <button mat-raised-button color="accent">SHARE</button>
+        <button mat-raised-button color="warn">DELETE</button>
+        <button mat-raised-button>COMMENTS</button>
+        <button mat-raised-button disabled>ARCHIVE</button>
+      </mat-card-actions>
 </mat-card>
