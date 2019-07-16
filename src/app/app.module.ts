@@ -9,12 +9,16 @@ import { AppComponent } from './app.component';
 import { PostListComponent } from './components/post-list/post-list.component';
 import { PostService } from './core/services/post.service';
 import { MaterialModule } from './modules/material.module';
+import { NavComponent } from './components/nav/nav.component';
+import { PostItemComponent } from './components/post-item/post-item.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostListComponent
+    PostListComponent,
+    NavComponent,
+    PostItemComponent,
   ],
   imports: [
     BrowserModule,
