@@ -1,6 +1,4 @@
 .post-card {
-    margin: auto;
-    margin-bottom: 30px;
     min-width: 500px;
     max-width: 900px;
 }
@@ -8,3 +6,10 @@
 .post-card-image {
     max-width: 992px;
 }
+
+.post-card-header-image {
+    background-image: url('../../../assets/3Cat.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  

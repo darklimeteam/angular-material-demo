@@ -10,11 +10,22 @@ import { map } from 'rxjs/operators';
 })
 export class NavComponent {
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  // https://material.angular.io/cdk/layout/overview
+
+  isHandsetPortrait$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.HandsetPortrait)
   .pipe(
     map(result => result.matches)
   );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver) {
+    breakpointObserver.observe([
+      Breakpoints.HandsetPortrait
+    ]).subscribe(result => {
+      if (result.matches) {
+        console.log(result);
+      }
+    });
+  }
+
 
 }
