@@ -13,6 +13,9 @@ import { MaterialModule } from './modules/material.module';
 import { NavComponent } from './components/nav/nav.component';
 import { PostItemComponent } from './components/post-item/post-item.component';
 import { TypographyComponent } from './components/typography/typography.component';
+import { SuperTableComponent } from './components/super-table/super-table.component';
+import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
+import { WrapTableComponent } from './components/wrap-table/wrap-table.component';
 
 
 @NgModule({
@@ -22,6 +25,8 @@ import { TypographyComponent } from './components/typography/typography.componen
     NavComponent,
     PostItemComponent,
     TypographyComponent,
+    SuperTableComponent,
+    WrapTableComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,10 @@ import { TypographyComponent } from './components/typography/typography.componen
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 100 }),
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [PostService],
   bootstrap: [AppComponent]
