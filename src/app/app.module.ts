@@ -12,6 +12,7 @@ import { PostService } from './core/services/post.service';
 import { MaterialModule } from './modules/material.module';
 import { NavComponent } from './components/nav/nav.component';
 import { PostItemComponent } from './components/post-item/post-item.component';
+import { TypographyComponent } from './components/typography/typography.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { PostItemComponent } from './components/post-item/post-item.component';
     PostListComponent,
     NavComponent,
     PostItemComponent,
+    TypographyComponent,
   ],
   imports: [
     BrowserModule,
