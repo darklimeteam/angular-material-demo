@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PostListComponent } from './components/post-list/post-list.component';
 import { TypographyComponent } from './components/typography/typography.component';
 import { WrapTableComponent } from './components/wrap-table/wrap-table.component';
+import { WrapTreeComponent } from './components/wrap-tree/wrap-tree.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path: 'table',
     component: WrapTableComponent
+  },
+  {
+    path: 'tree',
+    component: WrapTreeComponent,
   },
   {
     path: '**',
