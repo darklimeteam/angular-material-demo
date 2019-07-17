@@ -1,25 +1,26 @@
 <mat-card>
-    <mat-card-header>
-        <mat-card-title>
-            {{post.title}}
-            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-                <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" xPosition="before">
-                <button mat-menu-item>Expand</button>
-                <button mat-menu-item>Remove</button>
-            </mat-menu>
-        </mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-        <img mat-card-image [src]="post.imageSrc"  class="post-card-image">
-        <div>{{post.text}}</div>
-    </mat-card-content>
-    <mat-card-actions>
-        <button mat-raised-button color="primary">LIKE</button>
-        <button mat-raised-button color="accent">SHARE</button>
-        <button mat-raised-button color="warn">DELETE</button>
-        <button mat-raised-button>COMMENTS</button>
-        <button mat-raised-button disabled>ARCHIVE</button>
-      </mat-card-actions>
+  <mat-card-header>
+    <div mat-card-avatar class="post-card-header-image"></div>
+    <mat-card-title>{{post.authorName}}</mat-card-title>
+    <mat-card-subtitle>{{post.groupName}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <h1>{{post.title}}</h1>
+    <img mat-card-image [src]="post.imageSrc" class="post-card-image">
+    <div>{{post.text}}</div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary">LIKE</button>
+    <button mat-raised-button color="accent">SHARE</button>
+    <button mat-raised-button color="warn">DELETE</button>
+    <button mat-raised-button>COMMENTS</button>
+    <button mat-raised-button disabled>ARCHIVE</button>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" xPosition="after">
+      <button mat-menu-item>Expand</button>
+      <button mat-menu-item>Remove</button>
+    </mat-menu>
+  </mat-card-actions>
 </mat-card>

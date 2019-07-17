@@ -1,5 +1,6 @@
 <mat-drawer-container>
-  <mat-drawer #drawer mode="side" fxLayout="column" fxFlex="100%" fxFlex.gt-sm="100%" fxLayoutAlign="start center" >
+  <!--https://material.angular.io/components/sidenav/api-->
+  <mat-drawer #drawer mode="side" [ngClass]="{'mobile-style': isHandsetPortrait$ | async }">
     <mat-toolbar (click)="drawer.toggle()">User info</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item><img mat-card-avatar src="../../../assets/4Giraffe.jpg">
@@ -13,8 +14,8 @@
   </mat-drawer>
 
   <mat-toolbar color="primary">
-    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
-      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    <button type="button" mat-icon-button (click)="drawer.toggle()">
+      <mat-icon >menu</mat-icon>
     </button>
     <span>angular-material-demo</span>
     <button mat-button [matMenuTriggerFor]="menu">
