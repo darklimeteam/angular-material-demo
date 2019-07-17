@@ -1,0 +1,43 @@
+@import '~@angular/material/theming';
+
+/* Setup Angular Material typography */
+
+/* Setup global typography */
+
+$angular-material-demo-global-typography: mat-typography-config(
+  $font-family: 'Mountains of Christmas, cursive',
+  $body-1: mat-typography-level(0.9rem, 1.5em, 400),
+  $body-2: mat-typography-level(0.9rem, 1.5em, 700));
+
+@include angular-material-typography($angular-material-demo-global-typography);
+
+/* Setup base typography */
+
+$angular-material-demo-base-typography: mat-typography-config(
+  $font-family: 'Mountains of Christmas, cursive',
+  $headline: mat-typography-level(2.4rem, 1.5em, 100),
+  $title: mat-typography-level(1.7rem, 1.5em, 300),
+  $subheading-2: mat-typography-level(1.4rem, 1.5em, 300),
+  $subheading-1: mat-typography-level(1.1rem, 1.5em, 400),
+  $body-1: mat-typography-level(0.9rem, 1.5em, 400),
+  $body-2: mat-typography-level(0.9rem, 1.5em, 700),
+  $caption: mat-typography-level(0.8rem, 1.5em, 400));
+
+@include mat-base-typography($angular-material-demo-base-typography);
+
+/* Setup toolbar typography */
+
+$angular-material-demo-toolbar-typography: mat-typography-config(
+  $font-family: 'Mountains of Christmas, cursive',
+  $title: mat-typography-level(1.3rem, 1.3em, 300));
+
+@include mat-toolbar-typography($angular-material-demo-toolbar-typography);
+
+/* Setup card typography */
+
+$angular-material-demo-card-typography: mat-typography-config(
+  $font-family: 'Mountains of Christmas, cursive',
+  $headline: mat-typography-level(1.7rem, 1.5em, 300),
+  $title: mat-typography-level(1.7rem, 1.5em, 300));
+
+@include mat-card-typography($angular-material-demo-card-typography);
