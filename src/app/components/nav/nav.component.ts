@@ -13,15 +13,26 @@ import { ThemePickService } from 'src/app/core/services/theme-pick.service';
 export class NavComponent {
   readonly THEME_PICK = ThemePick;
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches)
-    );
+  // https://material.angular.io/cdk/layout/overview
+
+  isHandsetPortrait$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.HandsetPortrait)
+  .pipe(
+    map(result => result.matches)
+  );
 
   constructor(
     private breakpointObserver: BreakpointObserver,
     private themePickService: ThemePickService,
-  ) { }
+  ) {
+    breakpointObserver.observe([
+      Breakpoints.HandsetPortrait
+    ]).subscribe(result => {
+      if (result.matches) {
+        console.log(result);
+      }
+    });
+  }
+
 
   public setTheme(val: ThemePick): void {
     this.themePickService.setTheme(val);
