@@ -13,10 +13,6 @@ import { MaterialModule } from './modules/material.module';
 import { NavComponent } from './components/nav/nav.component';
 import { PostItemComponent } from './components/post-item/post-item.component';
 import { TypographyComponent } from './components/typography/typography.component';
-import { MatTreeModule, MatIconModule, MatButtonModule } from '@angular/material';
-import { SuperTreeComponent } from './components/super-tree/super-tree.component';
-import { WrapTreeComponent } from './components/wrap-tree/wrap-tree.component';
-import { SuperNestedTreeComponent } from './components/super-nested-tree/super-nested-tree.component';
 
 
 @NgModule({
@@ -26,9 +22,6 @@ import { SuperNestedTreeComponent } from './components/super-nested-tree/super-n
     NavComponent,
     PostItemComponent,
     TypographyComponent,
-    SuperTreeComponent,
-    WrapTreeComponent,
-    SuperNestedTreeComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,9 +30,7 @@ import { SuperNestedTreeComponent } from './components/super-nested-tree/super-n
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 100 }),
     MaterialModule,
     FlexLayoutModule,
-    MatTreeModule,
-    MatIconModule,
-    MatButtonModule
+
   ],
   providers: [PostService],
   bootstrap: [AppComponent]

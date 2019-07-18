@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PostListComponent } from './components/post-list/post-list.component';
 import { TypographyComponent } from './components/typography/typography.component';
-import { WrapTreeComponent } from './components/wrap-tree/wrap-tree.component';
-
 
 const routes: Routes = [
   {
@@ -16,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: 'tree',
-    component: WrapTreeComponent,
+    loadChildren: './modules/trees/trees.module#TreesModule'
   },
   {
     path: '**',
