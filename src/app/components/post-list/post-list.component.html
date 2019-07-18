@@ -1,10 +1,24 @@
+<!-- <div class="super-block">
+
+  <div class="super-block-header">
+    TEXT super-block-header
+  </div>
+
+  <div class="super-block-title">
+    TEXT super-block-title
+  </div>
+
+</div> -->
+
 <div class="post-list">
-    <div class="fixed-add-button">
-        <button mat-fab color="accent"><mat-icon>add</mat-icon></button>
-    </div>
-    <div fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="15px">
-        <ng-container *ngFor="let post of posts$ | async">
-            <app-post-item [post]="post"></app-post-item>
-        </ng-container>
-    </div>
+  <div class="fixed-add-button">
+    <button mat-fab color="accent">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+  <div fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="15px">
+    <ng-container *ngFor="let post of posts$ | async">
+      <app-post-item [post]="post"></app-post-item>
+    </ng-container>
+  </div>
 </div>
