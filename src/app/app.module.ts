@@ -13,15 +13,6 @@ import { MaterialModule } from './modules/material.module';
 import { NavComponent } from './components/nav/nav.component';
 import { PostItemComponent } from './components/post-item/post-item.component';
 import { TypographyComponent } from './components/typography/typography.component';
-import { SuperTableComponent } from './components/super-table/super-table.component';
-import { MatTableModule, MatPaginatorModule, MatSortModule, MatTreeModule, MatIconModule, MatButtonModule } from '@angular/material';
-import { WrapTableComponent } from './components/wrap-table/wrap-table.component';
-import { SuperTreeComponent } from './components/super-tree/super-tree.component';
-import { WrapTreeComponent } from './components/wrap-tree/wrap-tree.component';
-import { SuperNestedTreeComponent } from './components/super-nested-tree/super-nested-tree.component';
-import { SuperDragDropComponent } from './components/super-drag-drop/super-drag-drop.component';
-import { DragDropModule } from '@angular/cdk/drag-drop';
-import { WrapDragDropComponent } from './components/wrap-drag-drop/wrap-drag-drop.component';
 
 
 @NgModule({
@@ -31,13 +22,6 @@ import { WrapDragDropComponent } from './components/wrap-drag-drop/wrap-drag-dro
     NavComponent,
     PostItemComponent,
     TypographyComponent,
-    SuperTableComponent,
-    WrapTableComponent,
-    SuperTreeComponent,
-    WrapTreeComponent,
-    SuperNestedTreeComponent,
-    SuperDragDropComponent,
-    WrapDragDropComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,13 +30,6 @@ import { WrapDragDropComponent } from './components/wrap-drag-drop/wrap-drag-dro
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 100 }),
     MaterialModule,
     FlexLayoutModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatTreeModule,
-    MatIconModule,
-    MatButtonModule,
-    DragDropModule
   ],
   providers: [PostService],
   bootstrap: [AppComponent]

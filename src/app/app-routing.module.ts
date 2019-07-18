@@ -2,9 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PostListComponent } from './components/post-list/post-list.component';
 import { TypographyComponent } from './components/typography/typography.component';
-import { WrapTableComponent } from './components/wrap-table/wrap-table.component';
-import { WrapTreeComponent } from './components/wrap-tree/wrap-tree.component';
-import { WrapDragDropComponent } from './components/wrap-drag-drop/wrap-drag-drop.component';
 
 
 const routes: Routes = [
@@ -14,15 +11,15 @@ const routes: Routes = [
   },
   {
     path: 'table',
-    component: WrapTableComponent
+    loadChildren: './modules/tables/tables.module#TablesModule'
   },
   {
     path: 'tree',
-    component: WrapTreeComponent,
+    loadChildren: './modules/trees/trees.module#TreesModule'
   },
   {
     path: 'drag-drop',
-    component: WrapDragDropComponent,
+    loadChildren: './modules/show-drag-drop/show-drag-drop.module#ShowDragDropModule'
   },
   {
     path: '**',
