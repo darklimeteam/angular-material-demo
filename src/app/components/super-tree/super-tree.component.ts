@@ -79,4 +79,9 @@ export class SuperTreeComponent {
   getChildren(node: FileNode) {
     return observableOf(node.children);
   }
+
+  isEmptyFolder(index: number, node: FlatTreeNode) {
+    return node.type === 'folder' && !node.expandable;
+  }
+
 }

@@ -18,6 +18,7 @@ import { MatTableModule, MatPaginatorModule, MatSortModule, MatTreeModule, MatIc
 import { WrapTableComponent } from './components/wrap-table/wrap-table.component';
 import { SuperTreeComponent } from './components/super-tree/super-tree.component';
 import { WrapTreeComponent } from './components/wrap-tree/wrap-tree.component';
+import { SuperNestedTreeComponent } from './components/super-nested-tree/super-nested-tree.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { WrapTreeComponent } from './components/wrap-tree/wrap-tree.component';
     WrapTableComponent,
     SuperTreeComponent,
     WrapTreeComponent,
+    SuperNestedTreeComponent,
   ],
   imports: [
     BrowserModule,
