@@ -19,6 +19,9 @@ import { WrapTableComponent } from './components/wrap-table/wrap-table.component
 import { SuperTreeComponent } from './components/super-tree/super-tree.component';
 import { WrapTreeComponent } from './components/wrap-tree/wrap-tree.component';
 import { SuperNestedTreeComponent } from './components/super-nested-tree/super-nested-tree.component';
+import { SuperDragDropComponent } from './components/super-drag-drop/super-drag-drop.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { WrapDragDropComponent } from './components/wrap-drag-drop/wrap-drag-drop.component';
 
 
 @NgModule({
@@ -33,6 +36,8 @@ import { SuperNestedTreeComponent } from './components/super-nested-tree/super-n
     SuperTreeComponent,
     WrapTreeComponent,
     SuperNestedTreeComponent,
+    SuperDragDropComponent,
+    WrapDragDropComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,8 @@ import { SuperNestedTreeComponent } from './components/super-nested-tree/super-n
     MatSortModule,
     MatTreeModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    DragDropModule
   ],
   providers: [PostService],
   bootstrap: [AppComponent]

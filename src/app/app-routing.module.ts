@@ -4,6 +4,7 @@ import { PostListComponent } from './components/post-list/post-list.component';
 import { TypographyComponent } from './components/typography/typography.component';
 import { WrapTableComponent } from './components/wrap-table/wrap-table.component';
 import { WrapTreeComponent } from './components/wrap-tree/wrap-tree.component';
+import { WrapDragDropComponent } from './components/wrap-drag-drop/wrap-drag-drop.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'tree',
     component: WrapTreeComponent,
+  },
+  {
+    path: 'drag-drop',
+    component: WrapDragDropComponent,
   },
   {
     path: '**',
