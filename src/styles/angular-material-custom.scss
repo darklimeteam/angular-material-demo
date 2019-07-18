@@ -1,4 +1,3 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
@@ -17,15 +16,16 @@ $angular-material-demo-warn: mat-palette($mat-red);
 $angular-material-demo-theme: mat-light-theme($angular-material-demo-primary, $angular-material-demo-accent, $angular-material-demo-warn);
 
 // Init default theme.
-@include angular-material-theme($angular-material-demo-theme);
-// @include super-block-theme($angular-material-demo-theme);
-
+.demo-theme {
+  @include angular-material-theme($angular-material-demo-theme);
+  // @include super-block-theme($angular-material-demo-theme);
+}
 
 // Define an alternate dark theme.
 $angular-material-demo-dark-primary: mat-palette($mat-blue-grey);
-$angular-material-demo-dark-accent:  mat-palette($mat-amber, A200, A100, A400);
-$angular-material-demo-dark-warn:    mat-palette($mat-deep-orange);
-$angular-material-demo-dark-theme:   mat-dark-theme($angular-material-demo-dark-primary, $angular-material-demo-dark-accent, $angular-material-demo-dark-warn);
+$angular-material-demo-dark-accent: mat-palette($mat-amber, A200, A100, A400);
+$angular-material-demo-dark-warn: mat-palette($mat-deep-orange);
+$angular-material-demo-dark-theme: mat-dark-theme($angular-material-demo-dark-primary, $angular-material-demo-dark-accent, $angular-material-demo-dark-warn);
 
 // Init dark theme.
 .demo-dark-theme {
@@ -35,9 +35,9 @@ $angular-material-demo-dark-theme:   mat-dark-theme($angular-material-demo-dark-
 
 // Define an alternate custom theme.
 $angular-material-demo-custom-primary: mat-palette($md-palette1);
-$angular-material-demo-custom-accent:  mat-palette($md-palette2);
-$angular-material-demo-custom-warn:    mat-palette($md-palette3);
-$angular-material-demo-custom-theme:   mat-light-theme($angular-material-demo-custom-primary, $angular-material-demo-custom-accent, $angular-material-demo-custom-warn);
+$angular-material-demo-custom-accent: mat-palette($md-palette2);
+$angular-material-demo-custom-warn: mat-palette($md-palette3);
+$angular-material-demo-custom-theme: mat-light-theme($angular-material-demo-custom-primary, $angular-material-demo-custom-accent, $angular-material-demo-custom-warn);
 
 .demo-custom-theme {
   @include angular-material-theme($angular-material-demo-custom-theme);
@@ -48,5 +48,12 @@ $angular-material-demo-custom-theme:   mat-light-theme($angular-material-demo-cu
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

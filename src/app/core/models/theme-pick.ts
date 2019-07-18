@@ -1,5 +1,5 @@
 export enum ThemePick {
-    LIGHT = '',
+    LIGHT = 'demo-theme',
     DARK = 'demo-dark-theme',
     CUSTOM = 'demo-custom-theme',
 }
