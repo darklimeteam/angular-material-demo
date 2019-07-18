@@ -1,0 +1,18 @@
+@import '~@angular/material/theming';
+
+// Define a mixin that accepts a theme and outputs the theme-specific styles.
+@mixin super-block-theme($theme) {
+  // Extract the palettes you need from the theme definition.
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  // Define any styles affected by the theme.
+  .super-block {
+    // Use mat-color to extract individual colors from a palette.
+    background-color: mat-color($primary);
+    border-color: mat-color($accent, A400);
+  }
+}

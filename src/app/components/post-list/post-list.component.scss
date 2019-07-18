@@ -1,12 +1,18 @@
-// @import "../../../styles/angular-material-custom.scss";
+@import "../../../styles/angular-material-custom.scss";
+
+.super-block {
+  $primary: map-get($angular-material-demo-dark-theme, primary);
+  background-color: mat-color($primary, 900);
+}
+
 
 .post-list {
-    margin: 10px;
+  margin: 10px;
 }
 
 .fixed-add-button {
-    position: fixed;
-    bottom: 15px;
-    right: 25px;
-    z-index: 1;
+  position: fixed;
+  bottom: 15px;
+  right: 25px;
+  z-index: 1;
 }
