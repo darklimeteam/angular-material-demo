@@ -6,6 +6,30 @@
       <a mat-list-item><img mat-card-avatar src="../../../assets/4Giraffe.jpg">
         <span class="example-list-item">Giraffe</span>
       </a>
+      <a mat-list-item [routerLink]="['/']" routerLinkActive="router-link-active">
+        <mat-icon>
+          home
+        </mat-icon>
+        <span class="example-list-item">
+          Home
+        </span>
+      </a>
+      <a mat-list-item [routerLink]="['/typography']" routerLinkActive="router-link-active">
+        <mat-icon>
+          not_listed_location
+        </mat-icon>
+        <span class="example-list-item">
+          Typography
+        </span>
+      </a>
+      <a mat-list-item [routerLink]="['/table']" routerLinkActive="router-link-active">
+        <mat-icon>
+          not_listed_location
+        </mat-icon>
+        <span class="example-list-item">
+          Table
+        </span>
+      </a>
       <a mat-list-item href="#">
         <mat-icon>keyboard_arrow_left</mat-icon>
         <span class="example-list-item-logout">Logout</span>
@@ -15,19 +39,19 @@
 
   <mat-toolbar color="primary">
     <button type="button" mat-icon-button (click)="drawer.toggle()">
-      <mat-icon >menu</mat-icon>
+      <mat-icon>menu</mat-icon>
     </button>
     <span>angular-material-demo</span>
     <button mat-button [matMenuTriggerFor]="menu">
       <mat-icon>
-          color_lens
-        </mat-icon>
+        color_lens
+      </mat-icon>
     </button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item (click)="setTheme(THEME_PICK.LIGHT)">Theme 1</button>
-  <button mat-menu-item (click)="setTheme(THEME_PICK.DARK)">Theme 2</button>
-  <button mat-menu-item (click)="setTheme(THEME_PICK.CUSTOM)">Theme 3</button>
-</mat-menu>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="setTheme(THEME_PICK.LIGHT)">Theme 1</button>
+      <button mat-menu-item (click)="setTheme(THEME_PICK.DARK)">Theme 2</button>
+      <button mat-menu-item (click)="setTheme(THEME_PICK.CUSTOM)">Theme 3</button>
+    </mat-menu>
   </mat-toolbar>
   <ng-content></ng-content>
   <!-- <router-outlet></router-outlet> -->
